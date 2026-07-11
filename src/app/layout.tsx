@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/lib/auth-context";
+import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "birlinq Move",
-  description: "Privacy-first QR platform for car owners",
+  title: "birlinq Move — приватная QR-связь для авто",
+  description:
+    "Privacy-first QR-платформа. Безопасная связь с владельцем авто без раскрытия контактов.",
 };
 
 export default function RootLayout({
@@ -13,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>
+          <Nav />
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }
+
