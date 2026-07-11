@@ -5,6 +5,7 @@ import { ApiError, api, type PublicQrProfile } from "@/lib/api";
 import { MOVE_SCENARIOS, type MoveScenario } from "@/lib/move-scenarios";
 
 type Props = { code: string };
+const MAX_MESSAGE_LENGTH = 500;
 
 export function PublicQrPage({ code }: Props) {
   const [profile, setProfile] = useState<PublicQrProfile | null>(null);
@@ -51,7 +52,9 @@ export function PublicQrPage({ code }: Props) {
     };
   }, [code]);
 
-  const messageLeft = useMemo(() => 500 - message.length, [message.length]);
+  const messageLeft = useMemo(() => MAX_MESSAGE_LENGTH - message.length, [message.length]);
+  const isLeadScenario = scenario === "want_same_sticker";
+  const isSubmitDisabled = submitting || (!isLeadScenario && !message.trim());
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -61,7 +64,7 @@ export function PublicQrPage({ code }: Props) {
     try {
       await api.sendPublicInteraction(code, {
         scenario,
-        message: message.trim().slice(0, 500),
+        message: message.trim().slice(0, MAX_MESSAGE_LENGTH),
       });
       setSubmitState("success");
       setMessage("");
@@ -122,8 +125,8 @@ export function PublicQrPage({ code }: Props) {
           <span>Сообщение (до 500 символов)</span>
           <textarea
             value={message}
-            maxLength={500}
-            required={scenario !== "want_same_sticker"}
+            maxLength={MAX_MESSAGE_LENGTH}
+            required={!isLeadScenario}
             onChange={(event) => setMessage(event.target.value)}
             rows={5}
             placeholder="Опишите ситуацию"
@@ -131,7 +134,7 @@ export function PublicQrPage({ code }: Props) {
           <small className="muted">Осталось символов: {messageLeft}</small>
         </label>
 
-        <button type="submit" disabled={submitting || (scenario !== "want_same_sticker" && !message.trim())}>
+        <button type="submit" disabled={isSubmitDisabled}>
           {submitting ? "Отправка…" : "Отправить"}
         </button>
 

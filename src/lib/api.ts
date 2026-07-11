@@ -14,7 +14,9 @@ export class ApiError extends Error {
 
 function buildUrl(path: string): string {
   if (!API_BASE_URL) {
-    throw new ApiError("Не задан NEXT_PUBLIC_API_BASE_URL", 500);
+    throw new Error(
+      "NEXT_PUBLIC_API_BASE_URL environment variable is required but not set. Please add it to your .env file.",
+    );
   }
 
   return `${API_BASE_URL.replace(/\/$/, "")}${path}`;
@@ -84,7 +86,14 @@ export type OwnerDashboard = {
 };
 
 export type AdminOverview = {
-  qrBatches: Array<{ id: string; title: string; total: number; active: number; blocked: number }>;
+  qrBatches: Array<{
+    id: string;
+    title: string;
+    total: number;
+    active: number;
+    blocked: number;
+    qrCodes?: string[];
+  }>;
   interactionsToday: number;
   leadsToday: number;
 };

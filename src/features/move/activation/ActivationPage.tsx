@@ -42,6 +42,8 @@ export function ActivationPage({ code }: Props) {
     } catch (error) {
       if (error instanceof ApiError && error.status === 409) {
         setStatus("activated");
+        setSubmitState("success");
+        return;
       }
       setSubmitState("error");
     } finally {

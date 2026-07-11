@@ -1,42 +1,51 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { api, type AdminOverview } from "@/lib/api";
 
 export function AdminDashboardPage() {
   const [data, setData] = useState<AdminOverview | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "empty" | "error">("loading");
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [selectedQrCodeByBatch, setSelectedQrCodeByBatch] = useState<Record<string, string>>({});
 
-  const load = (showLoading = true) => {
-    if (showLoading) {
-      setStatus("loading");
-    }
-    api
-      .getAdminOverview()
-      .then((result) => {
-        setData(result);
-        setStatus(result.qrBatches.length === 0 ? "empty" : "ready");
-      })
-      .catch(() => setStatus("error"));
+  const applyOverview = (result: AdminOverview) => {
+    setData(result);
+    setStatus(result.qrBatches.length === 0 ? "empty" : "ready");
   };
 
+  const fetchOverview = useCallback(
+    () =>
+      api
+        .getAdminOverview()
+        .then((result) => applyOverview(result))
+        .catch(() => setStatus("error")),
+    [],
+  );
+
   useEffect(() => {
-    api
-      .getAdminOverview()
-      .then((result) => {
-        setData(result);
-        setStatus(result.qrBatches.length === 0 ? "empty" : "ready");
-      })
-      .catch(() => setStatus("error"));
-  }, []);
+    fetchOverview();
+  }, [fetchOverview]);
+
+  const getQrCode = (batchId: string, fallbackCode?: string) =>
+    selectedQrCodeByBatch[batchId] ?? fallbackCode ?? "";
 
   const toggleBlock = async (code: string, block: boolean) => {
-    if (block) {
-      await api.blockQr(code);
-    } else {
-      await api.unblockQr(code);
+    setActionError(null);
+    if (!code.trim()) {
+      setActionError("Укажите QR-код для блокировки или разблокировки.");
+      return;
     }
-    load();
+    try {
+      if (block) {
+        await api.blockQr(code);
+      } else {
+        await api.unblockQr(code);
+      }
+      fetchOverview();
+    } catch {
+      setActionError("Не удалось изменить статус QR. Повторите попытку.");
+    }
   };
 
   if (status === "loading") return <p className="state state-loading">Загрузка админ-панели…</p>;
@@ -58,22 +67,42 @@ export function AdminDashboardPage() {
       </div>
 
       <h2>Партии QR</h2>
+      {actionError ? <p className="state state-error">{actionError}</p> : null}
       <ul className="stack-sm">
         {data?.qrBatches.map((batch) => (
-          <li key={batch.id} className="card stack-sm">
-            <strong>{batch.title}</strong>
-            <span>Всего: {batch.total}</span>
-            <span>Активно: {batch.active}</span>
-            <span>Заблокировано: {batch.blocked}</span>
-            <div className="actions">
-              <button type="button" onClick={() => toggleBlock(batch.id, true)}>
-                Блокировать QR
-              </button>
-              <button type="button" onClick={() => toggleBlock(batch.id, false)}>
-                Разблокировать QR
-              </button>
-            </div>
-          </li>
+          (() => {
+            const qrCode = getQrCode(batch.id, batch.qrCodes?.[0]);
+            const isActionDisabled = !qrCode.trim();
+            return (
+              <li key={batch.id} className="card stack-sm">
+                <strong>{batch.title}</strong>
+                <span>Всего: {batch.total}</span>
+                <span>Активно: {batch.active}</span>
+                <span>Заблокировано: {batch.blocked}</span>
+                <label className="stack-xs">
+                  <span>QR-код для действия</span>
+                  <input
+                    value={qrCode}
+                    onChange={(event) =>
+                      setSelectedQrCodeByBatch((prev) => ({
+                        ...prev,
+                        [batch.id]: event.target.value,
+                      }))
+                    }
+                    placeholder="Введите код QR"
+                  />
+                </label>
+                <div className="actions">
+                  <button type="button" disabled={isActionDisabled} onClick={() => toggleBlock(qrCode, true)}>
+                    Блокировать QR
+                  </button>
+                  <button type="button" disabled={isActionDisabled} onClick={() => toggleBlock(qrCode, false)}>
+                    Разблокировать QR
+                  </button>
+                </div>
+              </li>
+            );
+          })()
         ))}
       </ul>
     </section>
