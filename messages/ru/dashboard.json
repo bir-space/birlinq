@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "overview": "Обзор",
+    "interactions": "Сообщения",
+    "qr": "Мои QR"
+  },
+  "time": {
+    "justNow": "только что",
+    "min": "{n} мин",
+    "h": "{n} ч",
+    "yesterday": "вчера",
+    "d": "{n} дн",
+    "never": "ещё не было"
+  },
+  "scenarios": {
+    "car_blocking": "Машина мешает",
+    "window_open": "Открыто окно",
+    "lights_on": "Включены фары",
+    "alarm": "Сработала сигнализация",
+    "tow": "Эвакуируют машину",
+    "accident": "Повреждение / ДТП",
+    "free_message": "Свободное сообщение",
+    "other": "Другое"
+  },
+  "interactionStatus": {
+    "new": "новое",
+    "resolved": "решено",
+    "spam": "спам"
+  },
+  "qrStatus": {
+    "created": "не активирован",
+    "printed": "не активирован",
+    "available": "не активирован",
+    "activated": "активен",
+    "paused": "пауза",
+    "blocked": "заблокирован",
+    "lost": "утерян",
+    "deleted": "удалён"
+  },
+  "overview": {
+    "greeting": "Здравствуйте, {name}",
+    "subtitle": "Сводка по вашим QR-наклейкам",
+    "stats": {
+      "activeQr": "Активных QR",
+      "ofTotal": "из {total}",
+      "scans7d": "Сканов за 7 дней",
+      "scans30d": "за 30 дней — {count}",
+      "submissions7d": "Обращений за 7 дней",
+      "unresolved": "Без ответа"
+    },
+    "latest": {
+      "title": "Последние обращения",
+      "all": "Все",
+      "empty": "Пока нет сообщений",
+      "emptyHint": "Когда кто-то отсканирует ваш QR и напишет вам, сообщение появится здесь."
+    },
+    "quick": {
+      "title": "Быстрые действия",
+      "qrTitle": "Мои QR",
+      "qrHint": "Наклейки, статусы и настройки",
+      "activateTitle": "Активировать QR",
+      "activateHint": "Подключить новую наклейку"
+    }
+  },
+  "interactions": {
+    "title": "Сообщения",
+    "subtitle": "Обращения по вашим QR-наклейкам",
+    "filterAll": "Все",
+    "filterNew": "Новые",
+    "groups": {
+      "today": "Сегодня",
+      "yesterday": "Вчера",
+      "earlier": "Ранее"
+    },
+    "loadMore": "Загрузить ещё",
+    "resolve": "Отметить решённым",
+    "resolveError": "Не удалось обновить статус. Попробуйте ещё раз.",
+    "empty": "Пока нет сообщений",
+    "emptyHint": "Когда кто-то отсканирует ваш QR и напишет вам, обращение появится здесь.",
+    "emptyCta": "Мои QR",
+    "newFilterEmpty": "Новых сообщений нет"
+  },
+  "qrList": {
+    "title": "Мои QR",
+    "subtitle": "Ваши наклейки и их статус",
+    "scans": "{count, plural, one {# скан} few {# скана} many {# сканов} other {# скана}}",
+    "lastScan": "последний — {time}",
+    "noScans": "сканов ещё не было",
+    "pause": "Приостановить",
+    "resume": "Возобновить",
+    "loadMore": "Загрузить ещё",
+    "actionError": "Не удалось изменить статус QR. Попробуйте ещё раз.",
+    "empty": "Нет активных QR",
+    "emptyHint": "Активируйте наклейку — и она появится здесь.",
+    "emptyCta": "Активировать QR"
+  },
+  "detail": {
+    "sectionQr": "QR-код",
+    "code": "Код",
+    "activated": "Активирован",
+    "lastScan": "Последний скан",
+    "scanCount": "Сканов",
+    "openPublic": "Открыть публичную страницу",
+    "sectionVehicle": "Карточка авто",
+    "fields": {
+      "title": "Название",
+      "make": "Марка",
+      "model": "Модель",
+      "color": "Цвет",
+      "plate": "Госномер"
+    },
+    "saved": "Сохранено",
+    "saveError": "Не удалось сохранить. Попробуйте ещё раз.",
+    "sectionPrivacy": "Приватность",
+    "privacyHint": "Что видят те, кто сканирует ваш QR",
+    "privacy": {
+      "show_owner_name": "Показывать имя",
+      "show_phone": "Показывать телефон",
+      "show_whatsapp": "Кнопка WhatsApp",
+      "show_telegram": "Кнопка Telegram",
+      "show_plate_number": "Показывать госномер",
+      "show_vehicle_details": "Показывать марку и цвет"
+    },
+    "privacyError": "Не удалось обновить настройку. Попробуйте ещё раз.",
+    "sectionDanger": "Опасная зона",
+    "pauseTitle": "Приостановить QR",
+    "pauseHint": "Публичная страница станет недоступна",
+    "resumeTitle": "Возобновить QR",
+    "resumeHint": "Публичная страница снова станет доступна",
+    "notFound": "QR-код не найден",
+    "noEntity": "К этому QR пока не привязан автомобиль"
+  }
+}

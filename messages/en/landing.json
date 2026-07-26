@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "birlinq — QR stickers: Move, Business, ID",
+    "description": "Fast. Simple. Private. birlinq QR stickers: reach the owner of a car or a lost item and share a digital business card — without exposing personal data."
+  },
+  "nav": {
+    "move": "Move",
+    "business": "Business",
+    "id": "ID",
+    "how": "How it works",
+    "why": "Why birlinq",
+    "lead": "Leave a request"
+  },
+  "hero": {
+    "tagline": "Fast. Simple. Private.",
+    "lead": "Smart QR stickers for your car, your business and the things that matter. All communication goes through the platform — your phone number stays hidden.",
+    "f1Title": "Secure",
+    "f1Text": "Your data is protected",
+    "f2Title": "Private",
+    "f2Text": "No personal data exposed",
+    "f3Title": "Always at hand",
+    "f3Text": "Everything in one app",
+    "f4Title": "Fast",
+    "f4Text": "Solutions in seconds",
+    "ctaPrimary": "Leave a request",
+    "ctaSecondary": "See what birlinq does"
+  },
+  "how": {
+    "heading": "How it works",
+    "lead": "Five steps from a QR sticker to a resolved issue — no calls, no phone number exposed.",
+    "s1Title": "Scan the QR",
+    "s1Text": "On a sticker on a car, an item, or a business card.",
+    "s2Title": "Describe the situation",
+    "s2Text": "Pick a ready-made scenario or write your own message.",
+    "s3Title": "The owner gets notified",
+    "s3Text": "Instantly, without your phone number.",
+    "s4Title": "They reply however suits them",
+    "s4Text": "Email, WhatsApp, or Telegram — their choice.",
+    "s5Title": "Issue resolved",
+    "s5Text": "Privately, with no extra contact exchanged."
+  },
+  "verticals": {
+    "heading": "What birlinq does",
+    "more": "Learn more",
+    "moveTitle": "birlinq Move",
+    "moveText": "Reach a vehicle's owner without exposing anyone's personal data.",
+    "moveB1": "Car, motorbike, bicycle, scooter",
+    "moveB2": "Blocked parking, open window, damage",
+    "moveB3": "Phone number stays hidden",
+    "businessTitle": "birlinq Business",
+    "businessText": "A digital business card and instant networking without borders.",
+    "businessB1": "Direct contact",
+    "businessB2": "Share your profile",
+    "businessB3": "Schedule a meeting",
+    "idTitle": "birlinq ID",
+    "idText": "Small QR stickers for the things that matter.",
+    "idB1": "Keys, wallet, documents, phone",
+    "idB2": "Found something? Notify the owner",
+    "idB3": "No personal data exposed"
+  },
+  "trust": {
+    "heading": "Trusted by"
+  },
+  "why": {
+    "heading": "Why choose birlinq?",
+    "f1Title": "Instant",
+    "f1Text": "Solutions in seconds, right when it matters.",
+    "f2Title": "Reliable",
+    "f2Text": "Your data is protected — privacy comes first.",
+    "f3Title": "Simple",
+    "f3Text": "An intuitive interface for everyone.",
+    "f4Title": "Universal",
+    "f4Text": "Move, Business and ID — every scenario in one service."
+  },
+  "leadSection": {
+    "heading": "One platform — every solution",
+    "text": "birlinq Move, birlinq Business and birlinq ID in a single service. Leave a request and we will get in touch when stickers are available in your city.",
+    "note": "We will contact you and never share your details with third parties.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "What should we call you",
+      "contact": "Phone or e-mail",
+      "contactPlaceholder": "+7 700 000 00 00",
+      "city": "City",
+      "cityPlaceholder": "Almaty",
+      "submit": "Leave a request",
+      "required": "Please fill in your name and contact",
+      "successTitle": "Request received!",
+      "successText": "Thank you! We will get in touch with you shortly."
+    }
+  },
+  "footer": {
+    "tagline": "QR stickers for staying in touch without exposing personal data.",
+    "rights": "© {year} birlinq. All rights reserved."
+  }
+}

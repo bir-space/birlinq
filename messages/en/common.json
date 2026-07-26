@@ -1,0 +1,18 @@
+{
+  "appName": "birlinq",
+  "notFound": "This page doesn't exist",
+  "backHome": "Back to home",
+  "loading": "Loading…",
+  "error": "Something went wrong. Please try again.",
+  "retry": "Retry",
+  "save": "Save",
+  "cancel": "Cancel",
+  "back": "Back",
+  "next": "Next",
+  "done": "Done",
+  "login": "Log in",
+  "logout": "Log out",
+  "register": "Sign up",
+  "dashboard": "Dashboard",
+  "language": "Language"
+}

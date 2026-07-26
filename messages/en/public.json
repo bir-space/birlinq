@@ -1,0 +1,81 @@
+{
+  "product": "Move",
+  "loading": "Opening the page…",
+  "entity": {
+    "vehicleFallback": "Vehicle",
+    "hiddenBadge": "Owner's contacts are hidden",
+    "whatHappened": "What happened?",
+    "choose": "Pick a situation — the owner will get a notification",
+    "privacyTitle": "The owner's data is protected",
+    "privacyText": "The phone number stays hidden unless the owner allows it"
+  },
+  "scenario": {
+    "banner": "Your message goes to the owner",
+    "bannerPrivacy": "your number stays hidden",
+    "messageLabel": "Message",
+    "editHint": "Edit it or send as is.",
+    "send": "Send",
+    "cancel": "Cancel",
+    "empty": "Please write a message",
+    "rateLimited": "Too many requests — please wait a moment and try again.",
+    "spamNote": "Spam and abuse are blocked. Every message is logged anonymously."
+  },
+  "thanks": {
+    "title": "Message sent",
+    "subtitle": "The owner will be notified right away",
+    "ownerMessage": "Message from the owner",
+    "privacyTitle": "Your number was not stored",
+    "privacyText": "Only the vehicle owner will see the message",
+    "leadDivider": "want one for yourself?",
+    "close": "Close"
+  },
+  "lead": {
+    "cta": "I want a sticker like this",
+    "ctaSub": "A QR page for your car",
+    "cardTitle": "A QR sticker for your car",
+    "cardText": "Take your public number off the windshield",
+    "nameLabel": "Name",
+    "namePlaceholder": "What should we call you",
+    "contactLabel": "Phone or email",
+    "contactPlaceholder": "+7 ___ ___ __ __",
+    "cityLabel": "City (optional)",
+    "cityPlaceholder": "Almaty",
+    "submit": "Get a sticker",
+    "required": "Required field",
+    "successTitle": "Request sent",
+    "successText": "We will contact you shortly"
+  },
+  "abuse": {
+    "link": "Report abuse",
+    "title": "Report abuse",
+    "text": "Tell us what's wrong with this page",
+    "reasonLabel": "Reason",
+    "reasons": {
+      "spam": "Spam",
+      "harassment": "Harassment or insults",
+      "impersonation": "Impersonation",
+      "other": "Other"
+    },
+    "noteLabel": "Comment (optional)",
+    "notePlaceholder": "Describe the problem…",
+    "submit": "Send report",
+    "cancel": "Cancel",
+    "successTitle": "Report sent",
+    "successText": "We will review it shortly",
+    "close": "Close"
+  },
+  "errors": {
+    "notFoundTitle": "QR code not found",
+    "notFoundText": "Check the link or scan the code again",
+    "unavailableTitle": "Page unavailable",
+    "unavailableText": "The owner has temporarily paused this QR code",
+    "rateLimitedTitle": "Too many requests",
+    "rateLimitedText": "Please wait a moment and refresh the page",
+    "genericTitle": "Something went wrong",
+    "genericText": "The request could not be completed. Please try again.",
+    "retry": "Retry"
+  },
+  "footer": {
+    "note": "birlinq.com · Not an emergency service"
+  }
+}

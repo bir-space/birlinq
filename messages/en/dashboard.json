@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "interactions": "Messages",
+    "qr": "My QRs"
+  },
+  "time": {
+    "justNow": "just now",
+    "min": "{n} min",
+    "h": "{n} h",
+    "yesterday": "yesterday",
+    "d": "{n} d",
+    "never": "not yet"
+  },
+  "scenarios": {
+    "car_blocking": "Car is blocking",
+    "window_open": "Window left open",
+    "lights_on": "Lights left on",
+    "alarm": "Alarm went off",
+    "tow": "Car is being towed",
+    "accident": "Damage / accident",
+    "free_message": "Free message",
+    "other": "Other"
+  },
+  "interactionStatus": {
+    "new": "new",
+    "resolved": "resolved",
+    "spam": "spam"
+  },
+  "qrStatus": {
+    "created": "not activated",
+    "printed": "not activated",
+    "available": "not activated",
+    "activated": "active",
+    "paused": "paused",
+    "blocked": "blocked",
+    "lost": "lost",
+    "deleted": "deleted"
+  },
+  "overview": {
+    "greeting": "Hello, {name}",
+    "subtitle": "A summary of your QR stickers",
+    "stats": {
+      "activeQr": "Active QRs",
+      "ofTotal": "of {total}",
+      "scans7d": "Scans, 7 days",
+      "scans30d": "30 days — {count}",
+      "submissions7d": "Messages, 7 days",
+      "unresolved": "Unresolved"
+    },
+    "latest": {
+      "title": "Latest messages",
+      "all": "All",
+      "empty": "No messages yet",
+      "emptyHint": "When someone scans your QR and writes to you, the message will show up here."
+    },
+    "quick": {
+      "title": "Quick actions",
+      "qrTitle": "My QRs",
+      "qrHint": "Stickers, statuses and settings",
+      "activateTitle": "Activate a QR",
+      "activateHint": "Connect a new sticker"
+    }
+  },
+  "interactions": {
+    "title": "Messages",
+    "subtitle": "Messages received via your QR stickers",
+    "filterAll": "All",
+    "filterNew": "New",
+    "groups": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "earlier": "Earlier"
+    },
+    "loadMore": "Load more",
+    "resolve": "Mark as resolved",
+    "resolveError": "Couldn't update the status. Please try again.",
+    "empty": "No messages yet",
+    "emptyHint": "When someone scans your QR and writes to you, the message will show up here.",
+    "emptyCta": "My QRs",
+    "newFilterEmpty": "No new messages"
+  },
+  "qrList": {
+    "title": "My QRs",
+    "subtitle": "Your stickers and their status",
+    "scans": "{count, plural, one {# scan} other {# scans}}",
+    "lastScan": "last — {time}",
+    "noScans": "no scans yet",
+    "pause": "Pause",
+    "resume": "Resume",
+    "loadMore": "Load more",
+    "actionError": "Couldn't change the QR status. Please try again.",
+    "empty": "No active QRs",
+    "emptyHint": "Activate a sticker and it will appear here.",
+    "emptyCta": "Activate a QR"
+  },
+  "detail": {
+    "sectionQr": "QR code",
+    "code": "Code",
+    "activated": "Activated",
+    "lastScan": "Last scan",
+    "scanCount": "Scans",
+    "openPublic": "Open public page",
+    "sectionVehicle": "Vehicle card",
+    "fields": {
+      "title": "Title",
+      "make": "Make",
+      "model": "Model",
+      "color": "Color",
+      "plate": "Plate number"
+    },
+    "saved": "Saved",
+    "saveError": "Couldn't save. Please try again.",
+    "sectionPrivacy": "Privacy",
+    "privacyHint": "What people see when they scan your QR",
+    "privacy": {
+      "show_owner_name": "Show my name",
+      "show_phone": "Show phone number",
+      "show_whatsapp": "WhatsApp button",
+      "show_telegram": "Telegram button",
+      "show_plate_number": "Show plate number",
+      "show_vehicle_details": "Show make and color"
+    },
+    "privacyError": "Couldn't update the setting. Please try again.",
+    "sectionDanger": "Danger zone",
+    "pauseTitle": "Pause QR",
+    "pauseHint": "The public page will become unavailable",
+    "resumeTitle": "Resume QR",
+    "resumeHint": "The public page will be available again",
+    "notFound": "QR code not found",
+    "noEntity": "No vehicle is linked to this QR yet"
+  }
+}

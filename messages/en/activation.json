@@ -1,0 +1,122 @@
+{
+  "productMove": "Move",
+  "stepLabel": "Step {current} of {total}",
+  "headers": {
+    "auth": "Sign up",
+    "vehicle": "Your car",
+    "privacy": "Privacy"
+  },
+  "entry": {
+    "title": "Sticker activation",
+    "subtitle": "Enter the code from the back of the sticker or scan the QR with your camera",
+    "codeLabel": "Sticker code",
+    "codePlaceholder": "BIR172",
+    "tokenLabel": "Activation code",
+    "tokenHint": "Printed next to the code on the back of the sticker",
+    "submit": "Activate",
+    "manualEntry": "Enter the code manually",
+    "or": "— or —",
+    "scanHint": "Scan the QR with your phone camera — the link opens activation automatically",
+    "whatIs": "What is birlinq Move?",
+    "bannerTitle": "Replace the number under the windshield",
+    "bannerText": "with a safe digital page",
+    "codeRequired": "Enter the sticker code",
+    "tokenRequired": "Enter the activation code",
+    "genericError": "Could not check the code. Please try again."
+  },
+  "notFound": {
+    "title": "Sticker not found",
+    "text": "Check the code — it may be a typo. If the sticker is new, try scanning the QR again.",
+    "retry": "Re-enter the code"
+  },
+  "already": {
+    "title": "Sticker already activated",
+    "text": "This QR is already linked to an item. If this is your sticker, sign in to manage it.",
+    "login": "Sign in",
+    "dashboard": "Go to dashboard"
+  },
+  "auth": {
+    "title": "Create an account",
+    "subtitle": "To manage QR stickers and receive messages.",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to continue the activation.",
+    "tabRegister": "Sign up",
+    "tabLogin": "Sign in",
+    "fullPage": "Open the full sign-in page"
+  },
+  "vehicle": {
+    "title": "Tell us about the car",
+    "subtitle": "The person scanning will see this info. You will set visibility in the next step.",
+    "make": "Make",
+    "makePlaceholder": "Toyota",
+    "model": "Model",
+    "modelPlaceholder": "Camry",
+    "color": "Color",
+    "colorOther": "Other color",
+    "colorOtherPlaceholder": "E.g. burgundy",
+    "plate": "Plate number",
+    "plateOptional": "optional",
+    "platePlaceholder": "A 123 BC 02",
+    "plateBannerTitle": "Plate number is hidden by default",
+    "plateBannerText": "It is shown only if you allow it",
+    "photoHint": "You can add a photo later in the dashboard",
+    "existingTitle": "Choose a car for the sticker",
+    "existingSubtitle": "You already have cars without an active QR — pick one or add a new one.",
+    "addNew": "Add a new car",
+    "chooseExisting": "Choose from my cars",
+    "makeRequired": "Enter the make",
+    "modelRequired": "Enter the model",
+    "colorRequired": "Choose a color",
+    "loadError": "Could not load your cars",
+    "createError": "Could not save the car. Please try again.",
+    "colors": {
+      "white": "White",
+      "black": "Black",
+      "gray": "Gray",
+      "silver": "Silver",
+      "red": "Red",
+      "blue": "Blue",
+      "green": "Green"
+    }
+  },
+  "privacy": {
+    "title": "What the scanner will see",
+    "subtitle": "Pick a mode. You can change it any time.",
+    "recommended": "recommended",
+    "presetSafe": "Safe",
+    "presetSafeLine1": "Visible: make, model, color",
+    "presetSafeLine2": "Hidden: name, phone, plate number",
+    "presetSafeLine3": "Contact: only via the birlinq form",
+    "presetOpen": "Open",
+    "presetOpenLine1": "Everything visible, including name and WhatsApp",
+    "presetOpenLine2": "Contact: WhatsApp / Telegram directly",
+    "presetMax": "Maximum privacy",
+    "presetMaxLine1": "Only \"owner's car\" is visible",
+    "presetMaxLine2": "Contact: only via the form",
+    "fineTuning": "Fine tuning",
+    "toggles": {
+      "show_owner_name": "Show owner name",
+      "show_phone": "Show phone",
+      "show_whatsapp": "WhatsApp directly",
+      "show_telegram": "Telegram directly",
+      "show_plate_number": "Show plate number",
+      "show_vehicle_details": "Show vehicle details"
+    }
+  },
+  "activationErrors": {
+    "entityHasQr": "This car already has an active sticker. Choose another car or add a new one.",
+    "chooseAnother": "Choose another car",
+    "alreadyActivated": "This sticker is already activated.",
+    "generic": "Could not activate the QR. Please try again."
+  },
+  "success": {
+    "title": "QR activated",
+    "subtitle": "Stick it on the windshield — and the page is live",
+    "whereTitle": "Where to stick it",
+    "whereText": "Bottom-left corner of the windshield, outside or inside, so the QR is visible from the street. Clean, dry surface.",
+    "checkTitle": "Verify it — scan it yourself",
+    "checkText": "Open the camera on another phone and go through one scenario to make sure the notification arrives.",
+    "dashboard": "Go to dashboard",
+    "skip": "Skip for now"
+  }
+}
