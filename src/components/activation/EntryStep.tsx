@@ -261,6 +261,12 @@ export function EntryStep({
       >
         {t("whatIs")}
       </Link>
+      <Link
+        href="/guide"
+        className="mt-2 text-[13px] text-muted underline-offset-4 hover:text-white hover:underline"
+      >
+        {t("guideLink")}
+      </Link>
 
       <div className="mt-10 flex w-full items-start gap-3 rounded-(--radius-card) border border-card-border bg-card p-4">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent text-ink-900">
